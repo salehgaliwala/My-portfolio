@@ -28,7 +28,7 @@ export const About = () => {
             technical proficiency with a deep understanding of design principles.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            Currently, I'm focusing on building high-performance applications with 
+            Currently, I&apos;m focusing on building high-performance applications with
             Next.js and exploring the possibilities of AI-driven development.
           </p>
           

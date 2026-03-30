@@ -39,7 +39,7 @@ export const Hero = () => {
             transition={{ delay: 0.4 }}
             className="text-lg md:text-xl text-muted-foreground max-w-2xl px-4 mb-10"
           >
-            I'm a full-stack developer and designer focused on building high-performance, 
+            I&apos;m a full-stack developer and designer focused on building high-performance,
             beautiful, and accessible web applications using Next.js and Tailwind CSS.
           </motion.p>
 
