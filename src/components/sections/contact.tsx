@@ -27,11 +27,25 @@ export const Contact = () => {
   });
 
   const onSubmit = async (data: ContactValues) => {
-    // Simulate API call
-    console.log('Form data:', data);
-    await new Promise((resolve) => setTimeout(resolve, 2000));
-    alert('Thank you! Your message has been sent successfully.');
-    reset();
+    try {
+      const response = await fetch('/api/send', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to send message');
+      }
+
+      alert('Thank you! Your message has been sent successfully.');
+      reset();
+    } catch (error) {
+      console.error('Error sending message:', error);
+      alert('Something went wrong. Please try again later.');
+    }
   };
 
   return (
