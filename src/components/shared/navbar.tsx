@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useTheme } from 'next-themes';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Moon, Sun, Laptop } from 'lucide-react';
+import { Menu, X, Moon, Sun } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const navLinks = [
@@ -23,7 +23,7 @@ export const Navbar = () => {
   const { theme, setTheme } = useTheme();
 
   useEffect(() => {
-    setMounted(true);
+    setTimeout(() => setMounted(true), 0);
     const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -103,7 +103,12 @@ export const Navbar = () => {
   );
 };
 
-const ThemeToggle = ({ theme, setTheme }: any) => {
+interface ThemeToggleProps {
+  theme: string | undefined;
+  setTheme: (theme: string) => void;
+}
+
+const ThemeToggle = ({ theme, setTheme }: ThemeToggleProps) => {
   return (
     <button
       onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}

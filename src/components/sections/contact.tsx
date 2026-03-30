@@ -3,7 +3,6 @@
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
-import { motion } from 'framer-motion';
 import { Mail, MessageSquare, Send, User } from 'lucide-react';
 import { Section } from './section-wrapper';
 import { cn } from '@/lib/utils';
@@ -45,9 +44,9 @@ export const Contact = () => {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 max-w-6xl mx-auto">
         <div className="lg:col-span-5 space-y-8">
           <div className="p-8 rounded-3xl glass space-y-6">
-            <h3 className="text-2xl font-bold">Let's discuss your next project</h3>
+            <h3 className="text-2xl font-bold">Let&apos;s discuss your next project</h3>
             <p className="text-muted-foreground">
-              I'm interested in freelance opportunities, full-time roles, or just chatting about code!
+              I&apos;m interested in freelance opportunities, full-time roles, or just chatting about code!
             </p>
             
             <div className="space-y-4">
